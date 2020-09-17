@@ -12,11 +12,11 @@ setup: pelican-themes/pelican-theme  ## Install local dependencies
 
 .PHONY: serve
 serve:  ## Run a local development server
-	pelican --autoreload --listen --relative-urls
+	poetry run pelican --autoreload --listen --relative-urls
 
 .PHONY: publish
 publish: build-publish  ## Publish the website to Github Pages
-	ghp-import \
+	poetry run ghp-import \
 		--message="Generate Pelican site" \
 		--branch=$(GITHUB_PAGES_BRANCH) \
 		--cname="mydomain.com" \
@@ -25,11 +25,11 @@ publish: build-publish  ## Publish the website to Github Pages
 
 .PHONY: build-dev
 build-dev:  ## Build a static, development version of the website
-	pelican --settings pelicanconf.py content
+	poetry run pelican --settings pelicanconf.py content
 
 .PHONY: build-publish
 build-publish:  ## Build a static, production version of the website
-	pelican --settings publishconf.py content
+	poetry run pelican --settings publishconf.py content
 
 .PHONY: clean
 clean:  ## Remove the output directory
