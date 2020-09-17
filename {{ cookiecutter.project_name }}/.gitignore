@@ -1,0 +1,9 @@
+# Files
+*.pid
+.tool-versions
+
+# Directories
+.venv/
+__pycache__/
+output/
+pelican-themes/

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "pappasam.github.io"
+version = "0.1.0"
+description = "Samuel Roeca's personal website"
+authors = ["Sam Roeca <samuel.roeca@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pelican = "^4.5.0"
+Markdown = "^3.2.2"
+cssmin = "^0.2.0"
+ghp-import = "^1.0.0"
+GitPython = "^3.1.8"
+beautifulsoup4 = "^4.9.1"
+webassets = "^2.0.0"
+mdx_include = "^1.3.3"
+typogrify = "^2.0.7"
+pelican-sitemap = "^1.0.2"
+pelican-neighbors = "^1.1.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.5.2"
+black = "^20.8b1"
+pylint = "^2.6.0"
+docformatter = "^1.3.1"
